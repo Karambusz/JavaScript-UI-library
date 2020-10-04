@@ -2,7 +2,6 @@ import $ from '../core';
 
 $.prototype.addAttribute = function(attributeName, attributeValue = '') {
     for (let i = 0; i < this.length; i++) {
-        console.log(this);
         if (!this[i].hasAttribute(attributeName)) {
             this[i].setAttribute(attributeName, attributeValue);
         } else {

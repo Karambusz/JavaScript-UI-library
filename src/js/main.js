@@ -1,14 +1,16 @@
 import './lib/lib';
 import $ from './lib/lib';
 
+
+
 $('button').on('click', function() {
-    console.log(this);
-    $(this).toggleClass('active');
+    $('div').eq(2).toggleClass('active');
 });
 
-$('div').addAttribute('data-number', 2);
+$('div').click(function() {
+    console.log($(this).index());
+});
 
+console.log($('div').eq(2).find('.some'));
 
-function sayHello() {
-    console.log('Hello');
-}
+//console.log($('button').html('Hello'));
