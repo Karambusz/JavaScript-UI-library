@@ -2279,6 +2279,18 @@ _core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.fadeOut = function (dura
   return this;
 };
 
+_core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.fadeToggle = function (duration, display = "", final) {
+  for (let i = 0; i < this.length; i++) {
+    if (window.getComputedStyle(this[i]).display === 'none') {
+      Object(_core__WEBPACK_IMPORTED_MODULE_0__["default"])(this[i]).fadeIn(duration, display, final);
+    } else {
+      Object(_core__WEBPACK_IMPORTED_MODULE_0__["default"])(this[i]).fadeOut(duration, final);
+    }
+  }
+
+  return this;
+};
+
 /***/ }),
 
 /***/ "./src/js/lib/modules/handlers.js":
@@ -2344,13 +2356,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 Object(_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])('#first').on('click', () => {
-  Object(_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])('div').eq(1).fadeOut(800);
+  Object(_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])('div').eq(1).fadeToggle(800);
 });
 Object(_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])('[data-count="second"]').on('click', () => {
-  Object(_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])('div').eq(2).fadeOut(800);
+  Object(_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])('div').eq(2).fadeToggle(800);
 });
 Object(_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])('button').eq(2).on('click', () => {
-  Object(_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])('.w-500').fadeOut(800);
+  Object(_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])('.w-500').fadeToggle(800);
 });
 
 /***/ })
