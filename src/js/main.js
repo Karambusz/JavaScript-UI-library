@@ -15,5 +15,6 @@ $('div').click(function() {
 
 //console.log($('.some').closest('.findmeq').addClass('wwasdasd'));
 console.log( $('.findme').siblings() );
+$('button').fadeOut(1800);
 
 //console.log($('button').html('Hello'));

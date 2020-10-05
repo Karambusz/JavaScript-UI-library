@@ -4,6 +4,7 @@ import './modules/classes';
 import './modules/atributes';
 import './modules/handlers';
 import './modules/actions';
+import './modules/effects';
 
 
 export default $;
