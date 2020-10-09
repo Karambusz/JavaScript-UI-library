@@ -48,7 +48,7 @@ $('#trigger').click(() => $('#trigger').createModal({
                 ['btn-success'],
                 false,
                 () => {
-                    alert('Данные сохранены');
+                    alert('Saved!');
                 }
             ],
             [
